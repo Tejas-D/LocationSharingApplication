@@ -1,0 +1,6 @@
+<resources>
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+        <!--If Key is lost: https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=A6:58:A1:AA:6A:60:28:9D:29:BF:6F:14:E7:82:FD:D1:DF:83:69:91%3Bcom.example.tejas.finalv2-->
+        AIzaSyC-akIUXnuHigNoQ32GtdgVgtfCKz5Wq9M
+    </string>
+</resources>

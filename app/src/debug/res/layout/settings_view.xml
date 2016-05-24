@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="631dp">
+
+            <Button
+                android:id="@+id/connectAliceBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect as Alice"
+                android:layout_alignTop="@+id/connectBobBtn"
+                android:layout_alignStart="@+id/locationCoarseDesc"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/connectBobBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect as Bob"
+                android:layout_marginBottom="71dp"
+                android:layout_above="@+id/disconnectStateBtn"
+                android:layout_toEndOf="@+id/connectAliceBtn"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/disconnectStateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disconnect"
+                android:visibility="invisible"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/locationCoarseDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use coarse location"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginBottom="26dp"
+                android:layout_above="@+id/autoSendSwitch"
+                android:layout_alignEnd="@+id/disconnectStateBtn"
+                android:layout_marginEnd="24dp"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/autoSendDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Auto Send"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_above="@+id/autoSendTimeDesc"
+                android:layout_alignStart="@+id/locationCoarseDesc"
+                android:layout_marginBottom="21dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/autoSendTimeDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Auto send every (sec)"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginBottom="49dp"
+                android:layout_above="@+id/sendLocationBtn"
+                android:layout_alignStart="@+id/autoSendDesc"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/sendLocationBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send location now"
+                android:layout_marginBottom="38dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:enabled="false"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/autoSendTimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:layout_below="@+id/autoSendDesc"
+                android:layout_alignEnd="@+id/autoSendSwitch"
+                android:layout_toEndOf="@+id/sendLocationBtn"
+                android:enabled="false" />
+
+            <TextView
+                android:id="@+id/connectionStatusDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connection status: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_above="@+id/connectionStateLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="23dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/connectionStateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disconnected"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_above="@+id/connectAliceBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                tools:ignore="HardcodedText" />
+
+            <Switch
+                android:id="@+id/coarseLocationSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_alignTop="@+id/locationCoarseDesc"
+                android:layout_alignEnd="@+id/connectBobBtn"
+                android:enabled="false" />
+
+            <Switch
+                android:id="@+id/autoSendSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_alignTop="@+id/autoSendDesc"
+                android:layout_alignStart="@+id/coarseLocationSwitch"
+                android:enabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/userNameTxt"
+                android:layout_above="@+id/connectAliceBtn"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/coarseStatusView"
+                android:layout_above="@+id/locationCoarseDesc"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
